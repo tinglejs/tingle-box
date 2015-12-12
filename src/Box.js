@@ -18,7 +18,7 @@ class Box extends React.Component {
         return <div ref='root' className={classnames('tBox', {
             [t.props.className]: !!t.props.className
         })}>
-            Box component for tingle
+            {t.props.children}
         </div>;
     }
 }
@@ -28,7 +28,9 @@ Box.defaultProps = {
 
 // http://facebook.github.io/react/docs/reusable-components.html
 Box.propTypes = {
-    className: React.PropTypes.string
+    className: React.PropTypes.string,
+    hAlign: React.PropTypes.string,
+    vAlign: React.PropTypes.string
 }
 
 Box.displayName = 'Box';
