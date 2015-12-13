@@ -29,8 +29,8 @@ Box.defaultProps = {
 // http://facebook.github.io/react/docs/reusable-components.html
 Box.propTypes = {
     className: React.PropTypes.string,
-    hAlign: React.PropTypes.string,
-    vAlign: React.PropTypes.string
+    hAlign: React.PropTypes.oneOf(['start', 'center', 'end']),
+    vAlign: React.PropTypes.oneOf(['start', 'center', 'end'])
 }
 
 Box.displayName = 'Box';
