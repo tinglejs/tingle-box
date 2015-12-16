@@ -1,7 +1,7 @@
 {
   "name": "tingle-box",
-  "version": "0.1.0",
-  "description": "tingle-box component for tingle.",
+  "version": "1.0.0",
+  "description": "flexbox component for tingle.",
   "repository": "https://github.com/tinglejs/tingle-box.git",
   "author": "",
   "main": "src/index.js",
@@ -11,12 +11,13 @@
   ],
   "keywords": [
     "tingle-box",
-    "Box",
-    ""
+    "tingle-flexbox",
+    "react-flexbox",
+    "flexbox-component"
   ],
   "dependencies": {
     "classnames": "^2.1.2",
-    "tingle-context": "~0.1.1",
+    "tingle-context": "~1.0.0",
     "tingle-style": "~0.3.1"
   },
   "devDependencies": {
@@ -24,7 +25,8 @@
     "babel-loader": "^5.3.2",
     "gulp": "^3.9.0",
     "tingle-dev-tools": "latest",
-    "react": "^0.13.3",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
     "fastclick": "^1.0.6"
   },
   "scripts": {
