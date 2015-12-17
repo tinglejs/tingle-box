@@ -1,6 +1,6 @@
 /**
  * Box Component for tingle
- * @author 
+ * @author gnosaij
  *
  * Copyright 2014-2015, Tingle Team, Alinw.
  * All rights reserved.
@@ -15,8 +15,13 @@ class Box extends React.Component {
 
     render() {
         let t = this;
-        return <div ref='root' className={classnames('tBox', {
-            [t.props.className]: !!t.props.className
+        let {
+          className,
+          ...other
+        } = t.props;
+
+        return <div ref='root' {...other} className={classnames('tBox', {
+            [t.props.className]: !!className
         })}>
             {t.props.children}
         </div>;
@@ -24,14 +29,14 @@ class Box extends React.Component {
 }
 
 Box.defaultProps = {
-}
+};
 
 // http://facebook.github.io/react/docs/reusable-components.html
 Box.propTypes = {
     className: React.PropTypes.string,
     hAlign: React.PropTypes.oneOf(['start', 'center', 'end']),
     vAlign: React.PropTypes.oneOf(['start', 'center', 'end'])
-}
+};
 
 Box.displayName = 'Box';
 

@@ -8,4 +8,4 @@
 require('tingle-context');
 window.FastClick && FastClick.attach(document.body);
 var Demo = require('./BoxDemo');
-React.render(<Demo/>, document.getElementById('TingleDemo'));
+ReactDOM.render(<Demo/>, document.getElementById('TingleDemo'));
