@@ -8,9 +8,12 @@
 const classnames = require('classnames');
 
 let HBox = (props) => {
-  let { className, flex, ...other } = props;
+  let { className, flex, vAlign, hAlign, ...other } = props;
   let cls = classnames('tFBH', {
     ['tFB' + flex]: !!flex,
+    tFBAS: vAlign === 'start',
+    tFBAC: vAlign === 'center',
+    tFBAE: vAlign === 'end',
     [className]: !!className
   });
 

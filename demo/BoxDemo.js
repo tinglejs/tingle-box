@@ -31,6 +31,24 @@ class Demo extends React.Component {
         <Box className="tBCb" flex={2}>2</Box>
         <Box className="tBCc" flex={1}>1</Box>
       </HBox>
+
+      <HBox style={{height:'100px'}} vAlign="start">
+        <Box className="tBCa">a</Box>
+        <Box className="tBCb">b</Box>
+        <Box className="tBCc">c</Box>
+      </HBox>
+
+      <HBox style={{height:'100px'}} vAlign="center">
+        <Box className="tBCa">a</Box>
+        <Box className="tBCb">b</Box>
+        <Box className="tBCc">c</Box>
+      </HBox>
+
+      <HBox style={{height:'100px'}} vAlign="end">
+        <Box className="tBCa">a</Box>
+        <Box className="tBCb">b</Box>
+        <Box className="tBCc">c</Box>
+      </HBox>
     </div>
   }
 }
