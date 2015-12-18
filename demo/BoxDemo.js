@@ -8,7 +8,7 @@
 
 const classnames = require('classnames');
 
-const {HBox} = require('../src');
+const {HBox, VBox, Box} = require('../src');
 
 class Demo extends React.Component {
 
@@ -23,10 +23,13 @@ class Demo extends React.Component {
   render() {
     let t = this;
     return <div>
-      <HBox>
-        <div className="tFB1">aaaa</div>
-        <div className="">ccc</div>
-        <div className="tFB1">bbbb</div>
+      <HBox style={{height:'100px'}}>
+        <VBox className="tBCa" flex={2}>
+          <Box className="tBCd" flex={1}>1</Box>
+          <Box className="tBCe" flex={2}>2</Box>
+        </VBox>
+        <Box className="tBCb" flex={2}>2</Box>
+        <Box className="tBCc" flex={1}>1</Box>
       </HBox>
     </div>
   }
