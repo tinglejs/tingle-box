@@ -7,37 +7,24 @@
  */
 const classnames = require('classnames');
 
-class Box extends React.Component {
+let HBox = (props) => {
+  let { className, ...other } = props;
 
-    constructor(props) {
-        super(props);
-    }
+  return <div {...other} className={classnames('tFBH', { [className]: !!className })}>
+    {props.children}
+  </div>;
+};
 
-    render() {
-        let t = this;
-        let {
-          className,
-          ...other
-        } = t.props;
-
-        return <div ref='root' {...other} className={classnames('tBox', {
-            [t.props.className]: !!className
-        })}>
-            {t.props.children}
-        </div>;
-    }
-}
-
-Box.defaultProps = {
+HBox.defaultProps = {
 };
 
 // http://facebook.github.io/react/docs/reusable-components.html
-Box.propTypes = {
+HBox.propTypes = {
     className: React.PropTypes.string,
     hAlign: React.PropTypes.oneOf(['start', 'center', 'end']),
     vAlign: React.PropTypes.oneOf(['start', 'center', 'end'])
 };
 
-Box.displayName = 'Box';
+HBox.displayName = 'HBox';
 
-module.exports = Box;
+module.exports = {HBox};
