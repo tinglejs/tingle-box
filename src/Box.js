@@ -31,8 +31,6 @@ let HBox = (props) => {
   </div>;
 };
 
-//HBox.defaultProps = {};
-
 HBox.propTypes = {
   className: React.PropTypes.string,
   flex: React.PropTypes.number,
@@ -66,8 +64,6 @@ let VBox = (props) => {
   </div>;
 };
 
-//VBox.defaultProps = {};
-
 VBox.propTypes = {
   className: React.PropTypes.string,
   flex: React.PropTypes.number,
@@ -77,7 +73,12 @@ VBox.propTypes = {
 
 VBox.displayName = 'VBox';
 
-// 伸缩元素
+/**
+ * 伸缩子元素
+ * @param props
+ * @returns {XML}
+ * @constructor
+ */
 let Box = (props) => {
   let { className, flex, ...other } = props;
   let cls = classnames({
@@ -89,8 +90,6 @@ let Box = (props) => {
     {props.children}
   </div>;
 };
-
-Box.defaultProps = {};
 
 Box.propTypes = {
   className: React.PropTypes.string,
