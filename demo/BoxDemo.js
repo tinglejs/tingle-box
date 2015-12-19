@@ -23,7 +23,7 @@ class Demo extends React.Component {
   render() {
     let t = this;
     return <div>
-      <HBox style={{height:'90px'}} className="demo">
+      <HBox className="wrapper">
         <VBox className="tBCa" flex={2}>
           <Box className="tBCd" flex={1}>1</Box>
           <Box className="tBCe" flex={2}>2</Box>
@@ -32,23 +32,51 @@ class Demo extends React.Component {
         <Box className="tBCc" flex={1}>1</Box>
       </HBox>
 
-      <HBox style={{height:'90px'}} vAlign="start" className="demo">
-        <Box className="tBCa">a</Box>
-        <Box className="tBCb">b</Box>
-        <Box className="tBCc">c</Box>
+      <HBox className="wrapper">
+        <Box className="box1">60 * 60</Box>
+        <Box className="box2">
+          auto * auto
+        </Box>
+        <Box className="box3" flex={1}>flex:1</Box>
       </HBox>
 
-      <HBox style={{height:'90px'}} vAlign="center" className="demo">
-        <Box className="tBCa">a</Box>
-        <Box className="tBCb">b</Box>
-        <Box className="tBCc">c</Box>
+      <HBox vAlign="start" className="wrapper">
+        <Box className="box1">60 * 60</Box>
+        <Box className="box2">
+          auto * auto
+        </Box>
+        <Box className="box3" flex={1}>flex:1</Box>
       </HBox>
 
-      <HBox style={{height:'90px'}} vAlign="end" className="demo">
-        <Box className="tBCa">a</Box>
-        <Box className="tBCb">b</Box>
-        <Box className="tBCc">c</Box>
+      <HBox vAlign="center" className="wrapper">
+        <Box className="box1">60 * 60</Box>
+        <Box className="box2">
+          auto * auto
+        </Box>
+        <Box className="box3" flex={1}>flex:1</Box>
       </HBox>
+
+      <HBox vAlign="end" className="wrapper">
+        <Box className="box1">60 * 60</Box>
+        <Box className="box2">
+          auto * auto
+        </Box>
+        <Box className="box3" flex={1}>flex:1</Box>
+      </HBox>
+
+      <HBox vAlign="center" hAlign="center" className="wrapper">
+        <Box className="box1">60 * 60</Box>
+        <Box className="box2">
+          auto * auto
+        </Box>
+      </HBox>
+
+      <VBox vAlign="center" hAlign="center" className="wrapper">
+        <Box className="box1">60 * 60</Box>
+        <Box className="box2">
+          auto * auto
+        </Box>
+      </VBox>
     </div>
   }
 }
