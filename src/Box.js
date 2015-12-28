@@ -7,6 +7,11 @@
  */
 const classnames = require('classnames');
 
+const START = 'start';
+const CENTER = 'center';
+const END = 'end';
+const ALIGN_VALUES = [START, CENTER, END];
+
 /**
  * 水平方向弹性容器
  * @param props
@@ -17,12 +22,12 @@ let HBox = (props) => {
   let { className, flex, vAlign, hAlign, ...other } = props;
   let cls = classnames('tFBH', {
     ['tFB' + flex]: !!flex,
-    tFBAS: vAlign === 'start',
-    tFBAC: vAlign === 'center',
-    tFBAE: vAlign === 'end',
-    tFBJS: hAlign === 'start',
-    tFBJC: hAlign === 'center',
-    tFBJE: hAlign === 'end',
+    tFBAS: vAlign === START,
+    tFBAC: vAlign === CENTER,
+    tFBAE: vAlign === END,
+    tFBJS: hAlign === START,
+    tFBJC: hAlign === CENTER,
+    tFBJE: hAlign === END,
     [className]: !!className
   });
 
@@ -34,8 +39,8 @@ let HBox = (props) => {
 HBox.propTypes = {
   className: React.PropTypes.string,
   flex: React.PropTypes.number,
-  hAlign: React.PropTypes.oneOf(['start', 'center', 'end']),
-  vAlign: React.PropTypes.oneOf(['start', 'center', 'end'])
+  hAlign: React.PropTypes.oneOf(ALIGN_VALUES),
+  vAlign: React.PropTypes.oneOf(ALIGN_VALUES)
 };
 
 HBox.displayName = 'HBox';
@@ -50,12 +55,12 @@ let VBox = (props) => {
   let { className, flex, vAlign, hAlign, ...other } = props;
   let cls = classnames('tFBV', {
     ['tFB' + flex]: !!flex,
-    tFBJS: vAlign === 'start',
-    tFBJC: vAlign === 'center',
-    tFBJE: vAlign === 'end',
-    tFBAS: hAlign === 'start',
-    tFBAC: hAlign === 'center',
-    tFBAE: hAlign === 'end',
+    tFBJS: vAlign === START,
+    tFBJC: vAlign === CENTER,
+    tFBJE: vAlign === END,
+    tFBAS: hAlign === START,
+    tFBAC: hAlign === CENTER,
+    tFBAE: hAlign === END,
     [className]: !!className
   });
 
@@ -67,8 +72,8 @@ let VBox = (props) => {
 VBox.propTypes = {
   className: React.PropTypes.string,
   flex: React.PropTypes.number,
-  hAlign: React.PropTypes.oneOf(['start', 'center', 'end']),
-  vAlign: React.PropTypes.oneOf(['start', 'center', 'end'])
+  hAlign: React.PropTypes.oneOf(ALIGN_VALUES),
+  vAlign: React.PropTypes.oneOf(ALIGN_VALUES)
 };
 
 VBox.displayName = 'VBox';
@@ -94,8 +99,8 @@ let Box = (props) => {
 Box.propTypes = {
   className: React.PropTypes.string,
   flex: React.PropTypes.number,
-  hAlign: React.PropTypes.oneOf(['start', 'center', 'end']),
-  vAlign: React.PropTypes.oneOf(['start', 'center', 'end'])
+  hAlign: React.PropTypes.oneOf(ALIGN_VALUES),
+  vAlign: React.PropTypes.oneOf(ALIGN_VALUES)
 };
 
 Box.displayName = 'Box';
